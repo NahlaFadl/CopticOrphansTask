@@ -119,6 +119,7 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel> : AppCompatA
     }
 
     override fun onNotAuthorized(exception: String?) {
+        dialogMessage(exception.toString())
     }
 
     override fun onServerSideError(exception: String?) {

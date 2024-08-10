@@ -19,14 +19,14 @@ object NetworkResult {
                 if (body != null) return Resource.success(body)
             } else {
                 when (response.code()) {
-                    500 -> status.onServerSideError(response.errorBody()?.source()?.buffer()?.readUtf8())
-                    406 -> status.onNotVerifyRequest(response.errorBody()?.source()?.buffer()?.readUtf8())
+                    500 -> status.onServerSideError(response.errorBody()?.source()?.buffer?.readUtf8())
+                    406 -> status.onNotVerifyRequest(response.errorBody()?.source()?.buffer?.readUtf8())
                     405 -> status.onNotAllowed()
                     404 -> status.onApiNotFound()
-                    401 -> status.onNotAuthorized(response.errorBody()?.source()?.buffer()?.readUtf8())
-                    400 -> status.onMakeAction(response.errorBody()?.source()?.buffer()?.readUtf8())
-                    422 -> status.onBadRequest(response.errorBody()?.source()?.buffer()?.readUtf8())
-                    429 -> status.onTooManyRequests(response.errorBody()?.source()?.buffer()?.readUtf8())
+                    401 -> status.onNotAuthorized(response.errorBody()?.source()?.buffer?.readUtf8())
+                    400 -> status.onMakeAction(response.errorBody()?.source()?.buffer?.readUtf8())
+                    422 -> status.onBadRequest(response.errorBody()?.source()?.buffer?.readUtf8())
+                    429 -> status.onTooManyRequests(response.errorBody()?.source()?.buffer?.readUtf8())
                     else -> status.onDynamicCode(response)
                 }
             }

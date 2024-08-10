@@ -6,4 +6,6 @@ object Constants {
 
     const val DEFAULT_CHANNEL_ID = "CH-00"
     const val DEFAULT_CHANNEL_NAME = "Default Channel"
+
+    const val QUERY_PAGE_SIZE = 15
 }

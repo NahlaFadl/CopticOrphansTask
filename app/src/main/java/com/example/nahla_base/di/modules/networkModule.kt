@@ -59,7 +59,7 @@ fun getOkHttp(
                 )
                 .addHeader("Device-Push-Token", appManger.getFcmToken())
                 .addHeader("mobile_version", android.os.Build.VERSION.SDK_INT.toString())
-                .addHeader("Authorization", "Bearer ${appManger.getUserToken()}")
+//                .addHeader("Authorization", "Bearer ${appManger.getUserToken()}")
 
             try {
                 val version =
