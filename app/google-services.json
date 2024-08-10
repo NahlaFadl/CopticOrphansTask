@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "506184120310",
+    "project_id": "fir-app-b0985",
+    "storage_bucket": "fir-app-b0985.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506184120310:android:9ae157854e4fa0dc8439d7",
+        "android_client_info": {
+          "package_name": "com.example.nahla_base"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_Q4cWTuHkr49iY0hkk82wZkN3m475dEg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
