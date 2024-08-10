@@ -3,11 +3,12 @@ package com.example.nahla_base.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.nahla_base.data.remote.dto.Items
 import com.example.nahla_base.data.remote.dto.RepositoriesData
 import com.example.nahla_base.databinding.ItemRepositoryBinding
 
-class RepoAdapter : RecyclerView.Adapter<RepoAdapter.MyHolder>() {
-    var list: MutableList<RepositoriesData> = mutableListOf()
+class SearchAdapter : RecyclerView.Adapter<SearchAdapter.MyHolder>() {
+    var list: MutableList<Items> = mutableListOf()
 
     class MyHolder(val binding: ItemRepositoryBinding) : RecyclerView.ViewHolder(binding.root) {
 
@@ -31,7 +32,7 @@ class RepoAdapter : RecyclerView.Adapter<RepoAdapter.MyHolder>() {
         holder.binding.tvRepoName.text = list[position].name
     }
 
-    fun setData(list: MutableList<RepositoriesData>){
+    fun setData(list: MutableList<Items>){
         this.list=list
         notifyDataSetChanged()
     }

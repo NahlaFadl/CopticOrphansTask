@@ -6,4 +6,5 @@ import com.example.nahla_base.data.remote.networkHandling.NetworkResult.getResul
 class MainRepository(var apiService: RetrofitApi) {
 
     suspend fun getRepositories(page:Int) = getResult{apiService.getRepositories(page)}
+    suspend fun getSearch(txtSearch:String,page:Int) = getResult{apiService.getSearch(txtSearch,page)}
 }

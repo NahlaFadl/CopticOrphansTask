@@ -4,27 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable
-            name="data"
-            type="com.example.nahla_base.data.remote.dto.RepositoriesData" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tvRepoName"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:text="@{data.name}"
+            tools:text="textview"
+            android:textColor="#707070"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="20dp"
+            android:textAlignment="viewStart"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageView12"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="dkskl" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="14dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRepoName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvRepoName" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="#F1F1F1"
+            app:layout_constraintEnd_toEndOf="@+id/imageView12"
+            app:layout_constraintStart_toStartOf="@+id/tvRepoName"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepoName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout></layout>

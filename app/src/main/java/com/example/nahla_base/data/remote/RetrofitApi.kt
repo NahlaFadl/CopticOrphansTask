@@ -1,6 +1,7 @@
 package com.example.nahla_base.data.remote
 
 import com.example.nahla_base.data.remote.dto.RepositoriesData
+import com.example.nahla_base.data.remote.dto.SearchData
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -15,4 +16,10 @@ interface RetrofitApi {
     suspend fun getRepositories(
         @Query("page") page:Int
     ):Response<List<RepositoriesData>>
+
+    @GET("search/repositories")
+    suspend fun getSearch(
+        @Query("q") q:String,
+        @Query("page") page:Int
+    ):Response<SearchData>
 }

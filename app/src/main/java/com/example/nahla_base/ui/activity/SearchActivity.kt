@@ -1,27 +1,26 @@
 package com.example.nahla_base.ui.activity
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AbsListView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nahla_base.R
 import com.example.nahla_base.base.BaseActivity
-import com.example.nahla_base.databinding.ActivityMainBinding
+import com.example.nahla_base.databinding.ActivitySearchBinding
 import com.example.nahla_base.ui.MainViewModel
 import com.example.nahla_base.ui.adapter.RepoAdapter
-import com.example.nahla_base.utils.Constants.QUERY_PAGE_SIZE
+import com.example.nahla_base.ui.adapter.SearchAdapter
+import com.example.nahla_base.utils.Constants
 import kotlin.reflect.KClass
 
-class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
+class SearchActivity : BaseActivity<ActivitySearchBinding, MainViewModel>() {
 
-    private lateinit var repoAdapter: RepoAdapter
+    lateinit var searchAdapter: SearchAdapter
     var isLoading = false
     var isLastPage = false
     var isScrolling = false
 
-    override fun resourceId(): Int = R.layout.activity_main
+    override fun resourceId(): Int = R.layout.activity_search
 
     override fun viewModelClass(): KClass<MainViewModel> = MainViewModel::class
 
@@ -30,23 +29,19 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     }
 
     override fun clicks() {
-        dataBinding.linearSearch.setOnClickListener {
-            val intent=Intent(this,SearchActivity::class.java)
-            startActivity(intent)
+        dataBinding.ivSearch.setOnClickListener {
+            viewModel.getSearch(this, dataBinding.edSearch.text.toString())
         }
     }
 
     override fun callApis() {
-        viewModel.getRepositories()
     }
 
     override fun observer() {
-        viewModel.repositoriesResponse.observe(this){
-            repoAdapter.setData(it!!.toMutableList())
+        viewModel.searchResponse.observe(this) {
+            searchAdapter.setData(it.items.toMutableList())
         }
     }
-
-
 
     val scrollListener = object : RecyclerView.OnScrollListener() {
 
@@ -61,12 +56,12 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
             val isNotLoadingAndNoteLastPage = !isLoading && !isLastPage
             val isAtLastItem = firstVisibleItemPosition + visibleItemCount >= totalItemCount
             val isNotAtBegging = firstVisibleItemPosition > 0
-            val isTotalMoreThanVisible = totalItemCount >= QUERY_PAGE_SIZE
+            val isTotalMoreThanVisible = totalItemCount >= Constants.QUERY_PAGE_SIZE
 
             val shouldPaginate =
                 isNotLoadingAndNoteLastPage && isAtLastItem && isNotAtBegging && isTotalMoreThanVisible && isScrolling
             if (shouldPaginate) {
-                viewModel.getRepositories()
+                viewModel.getSearch(this@SearchActivity,dataBinding.edSearch.text.toString())
                 isScrolling = false
             }
         }
@@ -82,11 +77,11 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     }
 
     private fun setupRecyclerView() {
-        repoAdapter=RepoAdapter()
-        dataBinding.rvRepo.apply {
-            adapter = repoAdapter
-            layoutManager = LinearLayoutManager(this@MainActivity)
-            addOnScrollListener(this@MainActivity.scrollListener)
+        searchAdapter= SearchAdapter()
+        dataBinding.rvSearch.apply {
+            adapter = searchAdapter
+            layoutManager = LinearLayoutManager(this@SearchActivity)
+            addOnScrollListener(this@SearchActivity.scrollListener)
         }
     }
 }
