@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.example.firebaseapp.R
 import com.example.firebaseapp.base.BaseActivity
 import com.example.firebaseapp.databinding.ActivitySignUpBinding
@@ -41,8 +42,10 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding, MainViewModel>() {
             Toast.makeText(this, "complete data", Toast.LENGTH_SHORT).show()
             return
         }
+        dataBinding.progressBar.isVisible=true
         mAuth?.createUserWithEmailAndPassword(email, password)
             ?.addOnCompleteListener {
+                dataBinding.progressBar.isVisible=false
                 if (it.isSuccessful) {
                     Toast.makeText(this, "done", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this,MainActivity::class.java))
