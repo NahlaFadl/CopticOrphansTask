@@ -1,4 +1,4 @@
-package com.example.nahla_base.di
+package com.example.firebaseapp.di
 
 import android.app.Application
 import android.app.NotificationChannel
@@ -6,11 +6,11 @@ import android.app.NotificationManager
 import android.content.Context
 import android.graphics.Color
 import android.os.Build
-import com.example.nahla_base.di.modules.classesModule
-import com.example.nahla_base.di.modules.networkModule
-import com.example.nahla_base.di.modules.preferencesModule
-import com.example.nahla_base.di.modules.viewModelModule
-import com.example.nahla_base.utils.Constants
+import com.example.firebaseapp.di.modules.classesModule
+import com.example.firebaseapp.di.modules.networkModule
+import com.example.firebaseapp.di.modules.preferencesModule
+import com.example.firebaseapp.di.modules.viewModelModule
+import com.example.firebaseapp.utils.Constants
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

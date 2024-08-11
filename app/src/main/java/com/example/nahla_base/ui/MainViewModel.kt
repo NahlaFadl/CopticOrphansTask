@@ -1,14 +1,14 @@
-package com.example.nahla_base.ui
+package com.example.firebaseapp.ui
 
 import android.content.Context
 import android.widget.Toast
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.nahla_base.base.BaseViewModel
-import com.example.nahla_base.data.remote.dto.RepositoriesData
-import com.example.nahla_base.data.remote.dto.SearchData
-import com.example.nahla_base.data.repositry.MainRepository
-import com.example.nahla_base.utils.AppManger
+import com.example.firebaseapp.base.BaseViewModel
+import com.example.firebaseapp.data.remote.dto.RepositoriesData
+import com.example.firebaseapp.data.remote.dto.SearchData
+import com.example.firebaseapp.data.repositry.MainRepository
+import com.example.firebaseapp.utils.AppManger
 import kotlinx.coroutines.launch
 
 class MainViewModel(

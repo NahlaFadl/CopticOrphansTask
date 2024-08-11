@@ -1,4 +1,4 @@
-package com.example.nahla_base.utils
+package com.example.firebaseapp.utils
 
 import android.app.Activity
 import android.content.Context

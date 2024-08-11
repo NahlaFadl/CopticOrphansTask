@@ -1,17 +1,17 @@
-package com.example.nahla_base.base
+package com.example.firebaseapp.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.example.nahla_base.R
-import com.example.nahla_base.data.remote.RetrofitApi
-import com.example.nahla_base.data.remote.dto.ResultDto
-import com.example.nahla_base.data.remote.networkHandling.NetworkResult
-import com.example.nahla_base.data.remote.networkHandling.NetworkStatus
-import com.example.nahla_base.utils.AppManger
-import com.example.nahla_base.utils.MyUtils.dialogMessage
+import com.example.firebaseapp.R
+import com.example.firebaseapp.data.remote.RetrofitApi
+import com.example.firebaseapp.data.remote.dto.ResultDto
+import com.example.firebaseapp.data.remote.networkHandling.NetworkResult
+import com.example.firebaseapp.data.remote.networkHandling.NetworkStatus
+import com.example.firebaseapp.utils.AppManger
+import com.example.firebaseapp.utils.MyUtils.dialogMessage
 import com.google.gson.Gson
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.getViewModel

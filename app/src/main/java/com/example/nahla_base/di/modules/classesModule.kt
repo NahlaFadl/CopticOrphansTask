@@ -1,7 +1,7 @@
-package com.example.nahla_base.di.modules
+package com.example.firebaseapp.di.modules
 
-import com.example.nahla_base.data.repositry.MainRepository
-import com.example.nahla_base.utils.AppManger
+import com.example.firebaseapp.data.repositry.MainRepository
+import com.example.firebaseapp.utils.AppManger
 import org.koin.dsl.module
 
 val classesModule = module {

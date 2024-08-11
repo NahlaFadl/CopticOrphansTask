@@ -9,7 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
         <LinearLayout
             android:id="@+id/linearSearch"
             android:layout_width="match_parent"
@@ -46,13 +47,6 @@
                 android:singleLine="true"
                 android:textColorHint="#C8C8C8" />
 
-            <ImageView
-                android:id="@+id/ivDelete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginEnd="14dp"
-                android:src="@drawable/ic_cleare" />
 
         </LinearLayout>
 

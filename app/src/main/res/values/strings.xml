@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Nahla_Base</string>
+    <string name="app_name">CopticOrphansTask</string>
     <string name="ok">موافق</string>
     <string name="cancel">إلغاء</string>
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+    <string name="default_web_client_id">506184120310-isrgsr1ks82882bder246g0c4dd5ltbs.apps.googleusercontent.com</string>
+
 </resources>

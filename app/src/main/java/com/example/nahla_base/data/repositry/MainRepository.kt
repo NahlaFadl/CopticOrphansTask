@@ -1,7 +1,7 @@
-package com.example.nahla_base.data.repositry
+package com.example.firebaseapp.data.repositry
 
-import com.example.nahla_base.data.remote.RetrofitApi
-import com.example.nahla_base.data.remote.networkHandling.NetworkResult.getResult
+import com.example.firebaseapp.data.remote.RetrofitApi
+import com.example.firebaseapp.data.remote.networkHandling.NetworkResult.getResult
 
 class MainRepository(var apiService: RetrofitApi) {
 

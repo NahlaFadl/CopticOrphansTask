@@ -1,4 +1,4 @@
-package com.example.nahla_base
+package com.example.firebaseapp
 
 import org.junit.Test
 

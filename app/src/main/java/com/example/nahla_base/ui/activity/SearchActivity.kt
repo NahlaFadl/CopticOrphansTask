@@ -1,16 +1,17 @@
-package com.example.nahla_base.ui.activity
+package com.example.firebaseapp.ui.activity
 
 import android.os.Bundle
 import android.widget.AbsListView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nahla_base.R
-import com.example.nahla_base.base.BaseActivity
-import com.example.nahla_base.databinding.ActivitySearchBinding
-import com.example.nahla_base.ui.MainViewModel
-import com.example.nahla_base.ui.adapter.RepoAdapter
-import com.example.nahla_base.ui.adapter.SearchAdapter
-import com.example.nahla_base.utils.Constants
+import com.example.firebaseapp.R
+import com.example.firebaseapp.databinding.ActivitySearchBinding
+import com.example.firebaseapp.base.BaseActivity
+import com.example.firebaseapp.ui.MainViewModel
+import com.example.firebaseapp.ui.adapter.RepoAdapter
+import com.example.firebaseapp.ui.adapter.SearchAdapter
+import com.example.firebaseapp.utils.Constants
 import kotlin.reflect.KClass
 
 class SearchActivity : BaseActivity<ActivitySearchBinding, MainViewModel>() {
@@ -25,6 +26,7 @@ class SearchActivity : BaseActivity<ActivitySearchBinding, MainViewModel>() {
     override fun viewModelClass(): KClass<MainViewModel> = MainViewModel::class
 
     override fun setUI(savedInstanceState: Bundle?) {
+        window.statusBarColor = ContextCompat.getColor(this,R.color.black)
         setupRecyclerView()
     }
 

@@ -1,4 +1,4 @@
-package com.example.nahla_base.data.remote.networkHandling
+package com.example.firebaseapp.data.remote.networkHandling
 
 data class Resource<out T>(val status: Status, val data: T?, val message: String?) {
 

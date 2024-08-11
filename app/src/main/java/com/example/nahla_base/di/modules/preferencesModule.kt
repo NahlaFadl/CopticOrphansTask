@@ -1,9 +1,9 @@
-package com.example.nahla_base.di.modules
+package com.example.firebaseapp.di.modules
 
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.nahla_base.utils.Constants
+import com.example.firebaseapp.utils.Constants
 import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
 

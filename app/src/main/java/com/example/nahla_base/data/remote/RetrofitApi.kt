@@ -1,7 +1,7 @@
-package com.example.nahla_base.data.remote
+package com.example.firebaseapp.data.remote
 
-import com.example.nahla_base.data.remote.dto.RepositoriesData
-import com.example.nahla_base.data.remote.dto.SearchData
+import com.example.firebaseapp.data.remote.dto.RepositoriesData
+import com.example.firebaseapp.data.remote.dto.SearchData
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

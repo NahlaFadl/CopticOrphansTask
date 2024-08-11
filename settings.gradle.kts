@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Nahla_Base"
+rootProject.name = "CopticOrphansTask"
 include(":app")
  

@@ -1,10 +1,10 @@
-package com.example.nahla_base.ui.adapter
+package com.example.firebaseapp.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nahla_base.data.remote.dto.RepositoriesData
-import com.example.nahla_base.databinding.ItemRepositoryBinding
+import com.example.firebaseapp.databinding.ItemRepositoryBinding
+import com.example.firebaseapp.data.remote.dto.RepositoriesData
 
 class RepoAdapter : RecyclerView.Adapter<RepoAdapter.MyHolder>() {
     var list: MutableList<RepositoriesData> = mutableListOf()

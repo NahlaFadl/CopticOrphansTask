@@ -1,6 +1,6 @@
-package com.example.nahla_base.di.modules
+package com.example.firebaseapp.di.modules
 
-import com.example.nahla_base.ui.MainViewModel
+import com.example.firebaseapp.ui.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

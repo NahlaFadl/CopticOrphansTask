@@ -1,11 +1,11 @@
-package com.example.nahla_base.utils
+package com.example.firebaseapp.utils
 
 import android.app.Activity
 import android.app.AlertDialog
 import android.view.LayoutInflater
 import androidx.core.view.isVisible
-import com.example.nahla_base.R
-import com.example.nahla_base.databinding.DialogConfirmBinding
+import com.example.firebaseapp.R
+import com.example.firebaseapp.databinding.DialogConfirmBinding
 
 object MyUtils {
     fun Activity.dialogMessage(

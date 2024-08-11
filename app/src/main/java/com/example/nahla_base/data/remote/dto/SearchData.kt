@@ -1,4 +1,4 @@
-package com.example.nahla_base.data.remote.dto
+package com.example.firebaseapp.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
 

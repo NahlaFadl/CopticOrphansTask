@@ -1,10 +1,10 @@
-package com.example.nahla_base.di.modules
+package com.example.firebaseapp.di.modules
 
 import android.content.Context
 import android.content.pm.PackageManager
 import android.provider.Settings
-import com.example.nahla_base.data.remote.RetrofitApi
-import com.example.nahla_base.utils.AppManger
+import com.example.firebaseapp.data.remote.RetrofitApi
+import com.example.firebaseapp.utils.AppManger
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer

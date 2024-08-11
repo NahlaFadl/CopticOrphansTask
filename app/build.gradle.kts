@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.nahla_base"
+    namespace = "com.example.firebaseapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.nahla_base"
+        applicationId = "com.example.firebaseapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -54,6 +54,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
 
     // Koin for Android
     implementation("io.insert-koin:koin-core:3.1.2")
@@ -77,5 +78,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
+
+    //facebook
+    implementation("com.facebook.android:facebook-login:[8,9)")
 
 }
