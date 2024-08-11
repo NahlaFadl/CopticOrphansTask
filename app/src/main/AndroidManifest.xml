@@ -17,7 +17,7 @@
         android:theme="@style/Theme.Nahla_Base"
         tools:targetApi="31">
         <activity
-            android:name="com.example.nahla_base.ui.activity.SplashActivity"
+            android:name=".ui.activity.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +27,7 @@
 
         </activity>
         <activity
-            android:name="com.example.nahla_base.ui.activity.SignUpActivity"
+            android:name=".ui.activity.SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activity.LoginActivity"

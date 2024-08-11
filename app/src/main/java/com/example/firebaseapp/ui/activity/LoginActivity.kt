@@ -1,17 +1,14 @@
 package com.example.firebaseapp.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.example.firebaseapp.R
 import com.example.firebaseapp.databinding.ActivityLoginBinding
 import com.example.firebaseapp.base.BaseActivity
 import com.example.firebaseapp.ui.MainViewModel
-import com.example.nahla_base.ui.activity.SignUpActivity
 import com.facebook.AccessToken
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
@@ -22,7 +19,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import kotlin.reflect.KClass
 
@@ -70,8 +66,10 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, MainViewModel>() {
             Toast.makeText(this, "complete data", Toast.LENGTH_SHORT).show()
             return
         }
+        dataBinding.progressBar.isVisible=true
         mAuth?.signInWithEmailAndPassword(email, password)
             ?.addOnCompleteListener {
+                dataBinding.progressBar.isVisible=false
                 if (it.isSuccessful) {
                     Toast.makeText(this, "done", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, MainActivity::class.java))

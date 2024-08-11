@@ -20,7 +20,10 @@ class MainViewModel(
     val repositoriesResponse = MediatorLiveData<List<RepositoriesData>?>()
     val searchResponse = MediatorLiveData<SearchData>()
 
-    var reposPage = 1
+    // variable
+    private var reposPage = 1
+    private var searchPage = 1
+    private var searchDataResponse: SearchData? = null
 
     fun getRepositories(){
         loading.value=true
@@ -39,8 +42,6 @@ class MainViewModel(
         }
     }
 
-    var searchPage = 1
-    var searchDataResponse: SearchData? = null
 
     fun getSearch(context: Context,txtSearch:String){
         if (txtSearch.isEmpty()){

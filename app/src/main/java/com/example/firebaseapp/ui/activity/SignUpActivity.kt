@@ -1,7 +1,6 @@
-package com.example.nahla_base.ui.activity
+package com.example.firebaseapp.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -9,7 +8,6 @@ import com.example.firebaseapp.R
 import com.example.firebaseapp.base.BaseActivity
 import com.example.firebaseapp.databinding.ActivitySignUpBinding
 import com.example.firebaseapp.ui.MainViewModel
-import com.example.firebaseapp.ui.activity.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlin.reflect.KClass
 
